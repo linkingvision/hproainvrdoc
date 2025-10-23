@@ -7,10 +7,10 @@ const config = {
   tagline: 'Docs on homepage',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-site.example.com',
+  url: 'https://linkingvision.com',
   baseUrl: '/hproainvrdoc',
-  organizationName: 'my-org',
-  projectName: 'my-docs-site',
+  organizationName: 'linkingvision',
+  projectName: 'hproainvrdoc',
 
   onBrokenLinks: 'ignore',//"ignore","throw"
 
@@ -58,11 +58,6 @@ const config = {
   themeConfig: {
     metadata: [{ name: 'keywords', content: 'hproainvrdoc, hproainvrdoc.com, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.' }],
     // image: 'img/docusaurus-social-card.jpg',
-    colorMode: {
-      defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
-    },
     navbar: {
       title: 'Hproainvrdoc',
       logo: {
@@ -88,7 +83,7 @@ const config = {
         },
         {
           href: 'https://linkingvision.com',
-          label: 'Linkingvision',
+          label: 'linkingvision',
           position: 'right',
         },
         {
@@ -98,27 +93,20 @@ const config = {
         },
       ],
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Support',
           items: [
             {
-              label: 'Sample Applications',
-              to: '/get-started/sample-tools-and-applications/',
-            },
-            {
-              label: 'Clustering & Scaling',
-              to: '/category/clustering-and-scaling/',
-            },
-            {
-              label: 'Adaptive Bitrate',
-              to: '/category/adaptive-bitrate/',
-            },
-            {
-              label: 'Troubleshooting',
-              to: '/guides/troubleshooting/',
+              label: 'Doc',//示例应用程序
+              to: 'https://linkingvision.com/muldload',
             },
           ],
         },
@@ -161,7 +149,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ant Media`,
+      copyright: `linkingvision.com © ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
