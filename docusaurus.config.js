@@ -12,7 +12,7 @@ const config = {
   organizationName: 'my-org',
   projectName: 'my-docs-site',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',//"ignore","throw"
 
   i18n: {
     defaultLocale: 'en',
@@ -26,6 +26,21 @@ const config = {
         docs: {
           routeBasePath: '/', // 文档即首页
           sidebarPath: './sidebars.js',
+
+          breadcrumbs: true,
+          lastVersion: 'current',
+          versions: {
+            'current': {
+              label: '2.14',
+              path: '',
+              banner: 'none',
+            },
+            '2.13': {
+              label: '2.13',
+              path: 'version-2.13',
+              banner: 'none',
+            },
+          },
         },
         blog: false, // 不要博客
         theme: {
@@ -34,11 +49,19 @@ const config = {
       },
     ],
   ],
-
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      { languages: ['en'] }
+    ],
+  ],
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    metadata: [{ name: 'keywords', content: 'hproainvrdoc, hproainvrdoc.com, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.' }],
+    // image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Hproainvrdoc',
@@ -53,6 +76,11 @@ const config = {
         //   position: 'left',
         //   label: 'Hproainvrdoc',
         // },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          dropdownActiveClassDisabled: false,
+        },
         {
           href: 'https://linkingvision.com/index.php/articles-list',
           label: 'Blog',

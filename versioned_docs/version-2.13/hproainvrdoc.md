@@ -1,10 +1,9 @@
 ---
-id: hproainvrdoc
 slug: /
 title: Hproainvrdoc
 sidebar_position: 1
 ---
 
-# 👋 欢迎
+# Hproainvrdoc
 
-首页文档内容。
+当前是2.13版本。
