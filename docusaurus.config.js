@@ -31,15 +31,15 @@ const config = {
           lastVersion: 'current',
           versions: {
             'current': {
-              label: '2.14',
+              label: 'r0.1.1104.2025',
               path: '',
               banner: 'none',
             },
-            '2.13': {
-              label: '2.13',
-              path: 'version-2.13',
-              banner: 'none',
-            },
+            // '2.13': {
+            //   label: '2.13',
+            //   path: 'version-2.13',
+            //   banner: 'none',
+            // },
           },
         },
         blog: false, // 不要博客
