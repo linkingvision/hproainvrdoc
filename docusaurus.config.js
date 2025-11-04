@@ -59,7 +59,7 @@ const config = {
     metadata: [{ name: 'keywords', content: 'hproainvrdoc, hproainvrdoc.com, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.tr, hproainvrdoc.com.' }],
     // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Hproainvrdoc',
+      // title: 'Hproainvrdoc',
       logo: {
         alt: 'Hproainvrdoc Logo',
         src: 'img/logo.svg',
@@ -82,14 +82,15 @@ const config = {
           position: 'right',
         },
         {
-          href: 'https://linkingvision.com',
-          label: 'linkingvision',
-          position: 'right',
-        },
-        {
           href: 'https://github.com/linkingvision',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          href: 'https://linkingvision.com',
+          label: 'linkingvision',
+          position: 'right',
+          className: 'navbar-linkingvision',
         },
       ],
     },

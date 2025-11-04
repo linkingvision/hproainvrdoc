@@ -253,8 +253,8 @@ article header h1 {
   font-size: 14px;
 }
 
-.navbar-free-trial {
-  background-color: #DF0517;
+.navbar-linkingvision {
+  background-color: #0399fe;
   /* or your brand color */
   color: #fff !important;
   border-radius: 6px;
@@ -263,6 +263,6 @@ article header h1 {
   transition: background-color 0.3s ease;
 }
 
-.navbar-free-trial:hover {
+/* .navbar-linkingvision:hover {
   background-color: #e64a19;
-}
+} */
