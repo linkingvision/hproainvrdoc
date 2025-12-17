@@ -5,7 +5,7 @@ sidebar_position: 1
 
 #### Introduction to Login
 
-After Hpro nvr runs normally, you can open the default port 16445 with the latest version of Chrome or Edge, and the following will appear.
+After HPro AI NVR runs normally, you can open the default port 16445 with the latest version of Chrome or Edge, and the following will appear.
 If the interface can be seen, it indicates that it has been successfully run The address is as follows:
 https://192.168.100.161:16445 Replace 192.168.100.161 with the actual IP address.
 Default username: admin, default password is Vision@168.
