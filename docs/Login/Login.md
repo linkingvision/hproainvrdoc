@@ -16,5 +16,3 @@ If the user logs in for the first time, it is mandatory to change the default pa
 First login requires changing password.
 ![](./Img/5cccefd437e20e8e892e3bdbe6c88987.png)
 
-Login successful.
-![](./Img/a814099b4c08f56d7c19c349aba03611.png)
