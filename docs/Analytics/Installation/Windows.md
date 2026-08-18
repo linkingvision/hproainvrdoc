@@ -8,21 +8,27 @@ title: Windows CUDA Inference
 
 #### Install the CUDA Driver For Windows
 
-The CUDA driver comes with its own GPU driver, so there is no need to install the GPU driver separately before installing the CUDA driver.The currently used version of CUDA is CUDA_11.8.0_522.06_windows.
+ The CUDA driver does not include the GPU driver, so the GPU driver must be installed separately before installing the CUDA driver. Starting from r4.0, CUDA version 13.2 is used.
+ You can access the following link to download https://developer.nvidia.com/cuda-downloads    
+ You can also directly click the following link to download:
+https://developer.download.nvidia.com/compute/cuda/13.2.2/local_installers/cuda_13.2.2_windows.exe
+  
+  After downloading, simply install it using the default configuration.
+  The nvidia-smi command allows you to check the CUDA version supported by the driver.
 
-You can access the following link to download https://developer.nvidia.com/cuda-downloads    
+#### Installation Of Windows TensorRT and cudnn Support Library
 
-You can also directly click the following link to download:
-
-https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_522.06_windows.exe
-
- After downloading, simply install it using the default configuration.
-
-#### Installation Of Windows TensorRT Support Library
-
- Contact technical support to obtain the tensorrt.zip package, and extract the package to C:\gpu\nvidia\tensorrt. The final directory structure is as follows:
+  Download TensorRT 10.16.1.11
+https://developer.download.nvidia.com/compute/machine-learning/tensorrt/10.16.1/zip/TensorRT-10.16.1.11.Windows.amd64.cuda-13.2.zip 
+  Extract the package to C:\gpu\nvidia\tensorrt. The final directory structure is as follows:
 
 ![00-SettingWinGPUTersorrt](./Img/00-SettingWinGPUTersorrt.png)
+
+  Download cudnn 9.20.0.48
+https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/windows-x86_64/cudnn-windows-x86_64-9.20.0.48_cuda13-archive.zip
+  Extract the package to C:\gpu\nvidia\cudnn. The final directory structure is as follows:
+
+![00-SettingWinGPUTersorrt](./Img/00-SettingWinGPUCudnn.png)
 
 #### Model File Installation
 

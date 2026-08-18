@@ -5,11 +5,11 @@ title: Linux CUDA Inference
 
 #### Linux CUDA Inference
 
- The system requires a CUDA-related runtime environment, the installation of the CUDA driver and TensorRT support library, and the acquisition of model files. The Linux verification version is Ubuntu 20.04.6 LTS x86_64.
+  The system requires a CUDA-related runtime environment, the installation of the CUDA driver and TensorRT support library, and the acquisition of model files. The Linux verification version is Ubuntu 24.04.4 LTS x86_64.
 
 #### Ubuntu Turn Off Kernel Auto Update
 
- The installed driver is related to the operating system kernel. If the operating system kernel is updated, the driver will become invalid. Therefore, it is necessary to disable automatic kernel updates.Take Ubuntu 20.4 as an example.
+ The installed driver is related to the operating system kernel. If the operating system kernel is updated, the driver will become invalid. Therefore, it is necessary to disable automatic kernel updates.Take Ubuntu 24.4 as an example.
 
  sudo systemctl disable --now unattended-upgrades
 
@@ -17,7 +17,7 @@ title: Linux CUDA Inference
 
  sudo vi /etc/apt/apt.conf.d/20auto-upgrades
 
-![00-SettingLinuxUbuntuDisableKernalUpdate](mk:@MSITStore:C:\xdev\02-h5s\h5sv\doc\help-manual\usc\USC-User-Manual-en\USC-User-Manual-en.chm::/00-settinglinuxubuntudisablekernalupdate.png)
+![00-SettingLinuxUbuntuDisableKernalUpdate](./Img/00-SettingLinuxUbuntuDisableKernalUpdate.png)
 
 cat /etc/apt/apt.conf.d/20auto-upgrades
 
@@ -27,31 +27,35 @@ APT::Periodic::Unattended-Upgrade "0";
 
 #### Install CUDA Driver For Linux
 
-The CUDA driver comes with its own GPU driver, so there is no need to install the GPU driver separately before installing the CUDA driver.The currently used version of CUDA is cuda_11.8.0_520.61.05_linux.run.
-
-You can enter the following link to download https://developer.nvidia.com/cuda-downloads    
-
-You can also directly click the link below to download:
-
-https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
-
+ The CUDA driver comes with its own GPU driver, so there is no need to install the GPU driver separately before installing the CUDA driver.The currently used version of CUDA is cuda_13.2.2_595.71.05_linux.run .
+ You can enter the following link to download https://developer.nvidia.com/cuda-downloads    
+ You can also directly click the link below to download:
+https://developer.download.nvidia.com/compute/cuda/13.2.2/local_installers/cuda_13.2.2_595.71.05_linux.run 
+  
 After downloading, refer to the following commands to install it. Install the GPU driver during installation.
-
-sudo ./cuda_11.8.0_520.61.05_linux.run
-
+sudo ./cuda_13.2.2_595.71.05_linux.run
 If the installation fails, you can replace tmpdir and install again.
+sudo ./cuda_13.2.2_595.71.05_linux.run --tmpdir=/home/user/tmp 
+The nvidia-smi command allows you to check the CUDA version supported by the driver.
 
-sudo ./cuda_11.8.0_520.61.05_linux.run --tmpdir=/home/user/tmp
+#### Linux Tensorrt and cudnn Support Library Installation
 
-#### Linux Tensorrt Support Library Installation
-
- Contact technical support to obtain the tensorrt.tar.gz package, and extract the package to /opt/tensorrt. The final directory structure is as follows:
+   Download TensorRT-10.16.1.11.Linux.x86_64-gnu.cuda-13.2.tar
+https://developer.nvidia.com/downloads/compute/machine-learning/tensorrt/10.16.1/tars/TensorRT-10.16.1.11.Linux.x86_64-gnu.cuda-13.2.tar.gz .
+ Extract the package to /opt/tensorrt. The final directory structure is as follows:
 
 ![00-SettingLinuxGPUTersorrt](./Img/00-SettingLinuxGPUTersorrt.png)
 
+
+   Download cudnn-linux-x86_64-9.20.0.48_cuda13-archive.tar.xz
+https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.20.0.48_cuda13-archive.tar.xz
+ Extract the package to /opt/cudnn. The final directory structure is as follows:
+
+![00-SettingLinuxGPUTersorrt](./Img/00-SettingLinuxGPUCudnn.png)
+
 #### Installation Of Model Files
 
- Contact technical support to obtain the model file package egplus.zip, and place the files in egplus/egpluscudamodel into the modules/ai/egplus/egpluscudamodel directory. The final directory structure is as follows:
+ Contact technical support to obtain the model file package egplus.zip, and place the files in egplus/egpluscudamodel into the conf/ai/egplus/egpluscudamodel directory. The final directory structure is as follows:
 
 ![00-SettingLinuxGPUEgplus](./Img/00-SettingLinuxGPUEgplus.png)
 
