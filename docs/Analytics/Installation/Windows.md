@@ -43,3 +43,5 @@ After the installation is complete, restart the USC service and navigate to Anal
 The system will generate an optimized model based on the GPU model during the first startup, which takes about 5 minutes. There will be a prompt in the Analyze-》Settings-》Inference Service Status, as shown in the following figure:
 
 ![00-SettingNGPUInit](./Img/00-SettingNGPUInit.png)
+Once initialization is complete, the detailed information of the model will be displayed:
+![00-00-InferStatus](./Img/00-InferStatus.png)
